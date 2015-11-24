@@ -5,7 +5,8 @@ public class Employee {
 	protected String id;
 	protected int yearJoined;
 	protected int totalAbsence;
-	
+	protected final int ANNUAL_LEAVE = 14;
+
 	/**
 	 * TODO: 
 	 * Tambahkan dengan input method (Scanner)	
@@ -42,5 +43,17 @@ public class Employee {
 		long totalSalary = getSalary() - getDeductedSalary();
 		return totalSalary;
 	}
-	
+
+	public int getYearJoined() {
+		return yearJoined;
+	}
+
+	public long getBonus(){
+		long bonus = ((getSalary()/yearJoined) * 2);
+		return bonus;
+	}
+
+	public int getAnnualLeave(){
+		return ANNUAL_LEAVE;
+	}
 }
